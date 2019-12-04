@@ -39,11 +39,17 @@ const Page = () => (
   </div>
 )
 
+const Provider = props => (
+  <Store.Provider>
+    {props.children}
+  </Store.Provider>
+)
+
 function App() {
   return (
-    <Store.Provider>
+    <Provider>
       <Page />
-    </Store.Provider>
+    </Provider>
   )
 }
 
